@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Photo Animator — прототип</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <h1>Photo Animator — прототип</h1>
+
+    <!-- Выбор файла -->
+    <label class="file-label">
+      <span>Выбери фотографию</span>
+      <input type="file" id="fileInput" accept="image/*" />
+    </label>
+
+    <!-- Кнопки управления -->
+    <div class="controls">
+      <button id="startAnimationBtn" disabled>Запустить анимацию</button>
+      <button id="stopAnimationBtn" disabled>Остановить анимацию</button>
+      <button id="clearMaskBtn" disabled>Сбросить выделение</button>
+
+      <!-- Сохранение -->
+      <button id="saveVideoBtn" disabled>Сохранить видео</button>
+      <button id="saveGifBtn" disabled>Сохранить GIF</button>
+    </div>
+
+    <!-- НОВОЕ: выбор длительности записи -->
+    <div class="record-controls">
+      <label for="recordDuration">
+        Длительность записи:
+      </label>
+      <select id="recordDuration" disabled>
+        <option value="3" selected>3 сек</option>
+        <option value="5">5 сек</option>
+        <option value="10">10 сек</option>
+      </select>
+    </div>
+
+    <!-- Настройка размера кисти -->
+    <div class="brush-controls">
+      <label for="brushSize">
+        Размер кисти:
+        <span id="brushSizeValue">30</span> px
+      </label>
+      <input
+        type="range"
+        id="brushSize"
+        min="5"
+        max="100"
+        step="1"
+        value="30"
+        disabled
+      />
+    </div>
+
+    <!-- Режим рисования -->
+    <div class="tool-mode">
+      <span>Режим рисования:</span>
+      <button id="brushModeBtn" class="active" disabled>Кисть</button>
+      <button id="eraserModeBtn" disabled>Ластик</button>
+    </div>
+
+    <p class="hint">
+      Рисуй маску кистью, стирай ластиком, запускай анимацию.
+      Выбери длительность и сохраняй в WebM или GIF.
+    </p>
+
+    <div class="preview">
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <!-- локальная библиотека gif.js -->
+  <script src="./gif.js"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
