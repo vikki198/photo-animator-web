@@ -26,7 +26,7 @@
       <button id="saveGifBtn" disabled>Сохранить GIF</button>
     </div>
 
-    <!-- НОВОЕ: выбор длительности записи -->
+    <!-- Длительность записи -->
     <div class="record-controls">
       <label for="recordDuration">
         Длительность записи:
@@ -36,6 +36,58 @@
         <option value="5">5 сек</option>
         <option value="10">10 сек</option>
       </select>
+    </div>
+
+    <!-- Выбор типа анимации -->
+    <div class="effect-controls">
+      <span>Тип анимации:</span>
+      <label>
+        <input
+          type="radio"
+          name="effectType"
+          id="effectBreathing"
+          value="breathing"
+          checked
+          disabled
+        />
+        Дыхание
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="effectType"
+          id="effectFlow"
+          value="flow"
+          disabled
+        />
+        Поток
+      </label>
+    </div>
+
+    <!-- НОВОЕ: направление потока -->
+    <div class="flow-direction">
+      <span>Направление потока:</span>
+      <label>
+        <input
+          type="radio"
+          name="flowDirection"
+          id="flowDirLeft"
+          value="left"
+          checked
+          disabled
+        />
+        Влево
+      </label>
+      <label>
+        <input
+          type="radio"
+          name="flowDirection"
+          id="flowDirRight"
+          value="right"
+          disabled
+        />
+        Вправо
+      </label>
     </div>
 
     <!-- Настройка размера кисти -->
@@ -64,7 +116,7 @@
 
     <p class="hint">
       Рисуй маску кистью, стирай ластиком, запускай анимацию.
-      Выбери длительность и сохраняй в WebM или GIF.
+      Выбирай тип эффекта: “Дыхание” или “Поток”, и сохраняй результат в WebM / GIF.
     </p>
 
     <div class="preview">
@@ -74,7 +126,6 @@
 
   <!-- локальная библиотека gif.js -->
   <script src="./gif.js"></script>
-
   <script src="app.js"></script>
 </body>
 </html>

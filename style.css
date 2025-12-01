@@ -60,6 +60,63 @@ h1 {
   cursor: default;
 }
 
+/* Длительность записи */
+.record-controls {
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.record-controls select {
+  background: #222;
+  color: #f5f5f5;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+/* НОВОЕ: выбор типа анимации */
+.effect-controls {
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.effect-controls span {
+  opacity: 0.9;
+}
+
+.effect-controls label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Направление потока */
+.flow-direction {
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.flow-direction span {
+  opacity: 0.9;
+}
+
+.flow-direction label {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
 /* Управление размером кисти */
 .brush-controls {
   margin-bottom: 8px;
@@ -75,7 +132,7 @@ h1 {
   width: 100%;
 }
 
-/* НОВОЕ: режим рисования (кисть / ластик) */
+/* Режим рисования (кисть / ластик) */
 .tool-mode {
   margin-bottom: 8px;
   font-size: 14px;
@@ -103,13 +160,12 @@ h1 {
   cursor: default;
 }
 
-/* Активный режим подсвечиваем */
 .tool-mode button.active:not(:disabled) {
   background: #0b6b3a;
   border-color: #1dd179;
 }
 
-/* Подсказка под контролами */
+/* Подсказка */
 .hint {
   margin-top: 0;
   margin-bottom: 12px;
@@ -128,21 +184,4 @@ h1 {
 #canvas {
   display: block;
   max-width: 100%;
-}
-
-/* НОВОЕ: управление длительностью записи */
-.record-controls {
-  margin-bottom: 12px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.record-controls select {
-  background: #222;
-  color: #f5f5f5;
-  border: 1px solid #444;
-  border-radius: 6px;
-  padding: 4px 8px;
 }
